@@ -1,0 +1,92 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+locale: "en-US"
+title_separator: "|"
+name: "Johnny"
+
+title: Johnny Talk
+email: ztouex@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Little fish in a big pond
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://ztou.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: ztouex
+github_username: ztou
+repository: "ztou/ztou.github.io"
+
+# Build settings
+markdown: kramdown
+#theme: minima
+#theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-include-cache
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+paginate: 10 # amount of posts to show
+paginate_path: /page:num/
+
+words_per_minute: 60
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      read_time: true
+      comments: true
+      related: true
+      layout: single
+
+# Note: Only the fikkrst 50 words of a post or page’s body content is added to the Lunr search index. 
+# Setting search_full_content to true in your _config.yml will override this and could impact page 
+# load performance.
+# search_full_content: true
+
+author:
+  name     : "ztou"
+  avatar   : "/assets/images/bio-johnny.jpg"
+  bio      : "A little fish in a big pond"
+  location : "SH"
+
+timezone: China/Beijing
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development  # disable compression in dev environment
+
+search: true
+
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "johnny-7"
